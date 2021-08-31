@@ -1,7 +1,7 @@
 
 ## Peter - Helix Sleep Challenge
 
-- [Web App Demo](https://helixsleepchallenge.herokuapp.com).
+<a href="https://helixsleepchallenge.herokuapp.com" target="_blank">View Demo App</a>
 
 ## Peter - Helix Sleep Challenge
 
