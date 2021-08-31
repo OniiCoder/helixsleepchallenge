@@ -1,23 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 ## Peter - Helix Sleep Challenge
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
 - [Web App Demo](https://helixsleepchallenge.herokuapp.com).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 ## Peter - Helix Sleep Challenge
 
@@ -39,7 +23,34 @@ I thought of a free hosting platform that can serve my web app from my GitHub re
 
 ## Database Structure
 
+Products table structure:
+
+<img src="https://i.ibb.co/CMzMMwY/Screenshot-2021-08-31-at-9-00-28-PM.png" alt="Screenshot-2021-08-31-at-9-00-28-PM" border="0" />
+
+Product table content:
+
+<img src="https://i.ibb.co/6NN4K3L/Screenshot-2021-08-31-at-9-00-45-PM.png" alt="Screenshot-2021-08-31-at-9-00-45-PM" border="0" />
+
+Variations table structure:
+
+<img src="https://i.ibb.co/DpBRhPT/Screenshot-2021-08-31-at-9-00-56-PM.png" alt="Screenshot-2021-08-31-at-9-00-56-PM" border="0" />
+
+Variations table content:
+
+<img src="https://i.ibb.co/xzhkLpY/Screenshot-2021-08-31-at-9-01-07-PM.png" alt="Screenshot-2021-08-31-at-9-01-07-PM" border="0" />
+
 
 ## API Requests & Responses
 
+Create new product:
+
+<img src="https://i.ibb.co/Rch7Frx/Screenshot-2021-08-31-at-9-04-05-PM.png" alt="Screenshot-2021-08-31-at-9-04-05-PM" border="0" />
+
+Create new variation:
+
 <img src="https://i.ibb.co/NmMTtgy/Screenshot-2021-08-31-at-9-04-17-PM.png" alt="Screenshot-2021-08-31-at-9-04-17-PM" border="0" />
+
+Fetch Single product + variations:
+
+<img src="https://i.ibb.co/JryVdrg/Screenshot-2021-08-31-at-9-02-06-PM.png" alt="Screenshot-2021-08-31-at-9-02-06-PM" border="0" />
+
