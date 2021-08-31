@@ -11,7 +11,7 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Web App Demo](https://helixsleepchallenge.herokuapp.com).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
@@ -19,46 +19,27 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Peter - Helix Sleep Challenge
 
-## Learning Laravel
+Below are the tools and technologies used for implementing the challenge:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Laravel (PHP)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+I used Laravel mainly because I have several years of experience working with the framework for building full fledged web applications and also for api endpoints development for mobile projects. Another reason for choosing Laravel even though I used an API approach to provide data to my views; Laravel lets you have your frontend and backend on the same project and you don't have to go through the hassle of navigating and switching between two projects/repos.
 
-## Laravel Sponsors
+I used Laravel to create the CRUD endpoints for "products" and also create different variations for a given product id. You can use the “/api/products/{id}” endpoint to fetch details of a product with a given product ID and the variations would be returned alongside the product details and that is what is used to populate the product page of the challenge.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### VueJS & Tailwind CSS
 
-### Premium Partners
+My familiarity with VueJs as a frontend framework and also the seamless integration with Laravel made me decide to use the framework for the frontend of the challenge. I used VueJS events emissions to trigger actions like updating the product banner/image, selected variation state and also for dynamically changing the “alt” property of the product banner image for accessibility. Tailwind was my choice for implementing the design because of the simplicity in implementation and the organized rules.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+### Heroku
 
-## Contributing
+I thought of a free hosting platform that can serve my web app from my GitHub repo directly with quick support for auto-deploy and also integrate my database using tools like ClearDB; Heroku was my all-in-one goto solution for this challenge.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Database Structure
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## API Requests & Responses
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<img src="https://i.ibb.co/NmMTtgy/Screenshot-2021-08-31-at-9-04-17-PM.png" alt="Screenshot-2021-08-31-at-9-04-17-PM" border="0" />
