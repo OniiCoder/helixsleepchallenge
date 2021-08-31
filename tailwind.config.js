@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         cursive: ['Bungee', 'cursive'],
-        sans_serif: ['Roboto', 'sans-serif']
+        sans_serif: ['Noto Sans', 'sans-serif']
       },
       colors: {
         'custom-gray': '#F2F2F2'

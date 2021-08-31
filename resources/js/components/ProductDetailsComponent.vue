@@ -7,18 +7,18 @@
         <div class="flex divide-x-4 divide-white mt-7">
             <div class="flex-1">
                 <div class="">
-                    <p class="text-center text-l text-gray-700">Pay Now</p>
-                    <h2 class="text-center text-2xl md:text-4xl text-red-700 font-bold " v-if="product != null">${{ formatPrice(product.price) }}</h2>
-                    <p class="text-center text-l md:text-xl text-gray-700 line-through" v-if="product != null">${{ formatPrice(product.price - product.discount) }}</p>
-                    <p class="text-center text-xs text-gray-700" v-if="product != null">${{ product.discount }} OFF with code</p>
+                    <p class="text-center text-l text-gray-700 font-sans_serif">Pay Now</p>
+                    <h2 class="text-center text-2xl md:text-4xl text-red-700 font-bold font-sans_serif" v-if="product != null">${{ formatPrice(product.price) }}</h2>
+                    <p class="text-center text-l md:text-xl text-gray-700 line-through font-sans_serif" v-if="product != null">${{ formatPrice(product.price - product.discount) }}</p>
+                    <p class="text-center text-xs text-gray-700 font-sans_serif" v-if="product != null">${{ product.discount }} OFF with code</p>
                 </div>
             </div>
             <div class="flex-1">
                 <div class="">
-                    <p class="text-center text-l text-gray-700">Pay as low as</p>
-                    <p class="text-center text-2xl md:text-4xl text-red-700 font-bold ">$25<span class="text-sm">/month</span></p>
-                    <p class="text-center text-l md:text-xl text-gray-700">with Klarna</p>
-                    <p class="text-center text-xs text-gray-700 underline">Learn More</p>
+                    <p class="text-center text-l text-gray-700 font-sans_serif">Pay as low as</p>
+                    <p class="text-center text-2xl md:text-4xl text-red-700 font-bold font-sans_serif">$25<span class="text-sm">/month</span></p>
+                    <p class="text-center text-l md:text-xl text-gray-700 font-sans_serif">with Klarna</p>
+                    <p class="text-center text-xs text-gray-700 underline font-sans_serif">Learn More</p>
                 </div>
             </div>
         </div>

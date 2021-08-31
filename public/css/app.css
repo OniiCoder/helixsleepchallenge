@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Bungee&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -32452,7 +32453,7 @@ video {
 }
 
 .font-sans_serif{
-  font-family: Roboto, sans-serif;
+  font-family: Noto Sans, sans-serif;
 }
 
 .text-xs{
@@ -63886,7 +63887,7 @@ video {
   }
 
   .sm\:font-sans_serif{
-    font-family: Roboto, sans-serif;
+    font-family: Noto Sans, sans-serif;
   }
 
   .sm\:text-xs{
@@ -95301,7 +95302,7 @@ video {
   }
 
   .md\:font-sans_serif{
-    font-family: Roboto, sans-serif;
+    font-family: Noto Sans, sans-serif;
   }
 
   .md\:text-xs{
@@ -126716,7 +126717,7 @@ video {
   }
 
   .lg\:font-sans_serif{
-    font-family: Roboto, sans-serif;
+    font-family: Noto Sans, sans-serif;
   }
 
   .lg\:text-xs{
@@ -158131,7 +158132,7 @@ video {
   }
 
   .xl\:font-sans_serif{
-    font-family: Roboto, sans-serif;
+    font-family: Noto Sans, sans-serif;
   }
 
   .xl\:text-xs{
@@ -189546,7 +189547,7 @@ video {
   }
 
   .\32xl\:font-sans_serif{
-    font-family: Roboto, sans-serif;
+    font-family: Noto Sans, sans-serif;
   }
 
   .\32xl\:text-xs{

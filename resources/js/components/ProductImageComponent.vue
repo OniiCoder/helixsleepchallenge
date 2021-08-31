@@ -4,14 +4,14 @@
             <div>
                 <a name="variant-view"></a>
                 <span class="flex items-end text-xs md:text-sm text-gray-700">
-                    <div class="flex items-center">
+                    <div class="flex items-center font-sans_serif">
                         <img class="mr-1.5 w-2.5 md:w-3" :src="'/assets/padlock.svg'" alt="Padlock icon" >
                         Secure Checkout
                     </div>
                 </span>
             </div>
 
-            <span class="flex items-end text-xs md:text-sm text-gray-700">
+            <span class="flex items-end text-xs md:text-sm text-gray-700 font-sans_serif">
             Ships in 5-7 Business Days
             </span>
         </div>

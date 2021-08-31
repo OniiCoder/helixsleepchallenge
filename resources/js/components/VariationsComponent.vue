@@ -6,7 +6,7 @@
             Choose your choice from fabrics to leather.
         </p>
 
-        <h1 class="text-base text-gay-600 font-bold mt-6">Fabric choices</h1>
+        <h1 class="text-base text-gay-600 font-bold font-sans_serif mt-6">Fabric choices</h1>
 
         <div class="mt-3 mb-20">
             <div class="grid grid-cols-3 gap-2 md:gap-12 lg:gap-4">

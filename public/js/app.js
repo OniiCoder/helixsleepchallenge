@@ -3381,16 +3381,18 @@ var render = function() {
     _c("div", { staticClass: "flex divide-x-4 divide-white mt-7" }, [
       _c("div", { staticClass: "flex-1" }, [
         _c("div", {}, [
-          _c("p", { staticClass: "text-center text-l text-gray-700" }, [
-            _vm._v("Pay Now")
-          ]),
+          _c(
+            "p",
+            { staticClass: "text-center text-l text-gray-700 font-sans_serif" },
+            [_vm._v("Pay Now")]
+          ),
           _vm._v(" "),
           _vm.product != null
             ? _c(
                 "h2",
                 {
                   staticClass:
-                    "text-center text-2xl md:text-4xl text-red-700 font-bold "
+                    "text-center text-2xl md:text-4xl text-red-700 font-bold font-sans_serif"
                 },
                 [_vm._v("$" + _vm._s(_vm.formatPrice(_vm.product.price)))]
               )
@@ -3401,7 +3403,7 @@ var render = function() {
                 "p",
                 {
                   staticClass:
-                    "text-center text-l md:text-xl text-gray-700 line-through"
+                    "text-center text-l md:text-xl text-gray-700 line-through font-sans_serif"
                 },
                 [
                   _vm._v(
@@ -3417,9 +3419,14 @@ var render = function() {
             : _vm._e(),
           _vm._v(" "),
           _vm.product != null
-            ? _c("p", { staticClass: "text-center text-xs text-gray-700" }, [
-                _vm._v("$" + _vm._s(_vm.product.discount) + " OFF with code")
-              ])
+            ? _c(
+                "p",
+                {
+                  staticClass:
+                    "text-center text-xs text-gray-700 font-sans_serif"
+                },
+                [_vm._v("$" + _vm._s(_vm.product.discount) + " OFF with code")]
+              )
             : _vm._e()
         ])
       ]),
@@ -3439,15 +3446,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex-1" }, [
       _c("div", {}, [
-        _c("p", { staticClass: "text-center text-l text-gray-700" }, [
-          _vm._v("Pay as low as")
-        ]),
+        _c(
+          "p",
+          { staticClass: "text-center text-l text-gray-700 font-sans_serif" },
+          [_vm._v("Pay as low as")]
+        ),
         _vm._v(" "),
         _c(
           "p",
           {
             staticClass:
-              "text-center text-2xl md:text-4xl text-red-700 font-bold "
+              "text-center text-2xl md:text-4xl text-red-700 font-bold font-sans_serif"
           },
           [
             _vm._v("$25"),
@@ -3457,13 +3466,19 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "p",
-          { staticClass: "text-center text-l md:text-xl text-gray-700" },
+          {
+            staticClass:
+              "text-center text-l md:text-xl text-gray-700 font-sans_serif"
+          },
           [_vm._v("with Klarna")]
         ),
         _vm._v(" "),
         _c(
           "p",
-          { staticClass: "text-center text-xs text-gray-700 underline" },
+          {
+            staticClass:
+              "text-center text-xs text-gray-700 underline font-sans_serif"
+          },
           [_vm._v("Learn More")]
         )
       ])
@@ -3532,7 +3547,7 @@ var render = function() {
           "span",
           { staticClass: "flex items-end text-xs md:text-sm text-gray-700" },
           [
-            _c("div", { staticClass: "flex items-center" }, [
+            _c("div", { staticClass: "flex items-center font-sans_serif" }, [
               _c("img", {
                 staticClass: "mr-1.5 w-2.5 md:w-3",
                 attrs: { src: "/assets/padlock.svg", alt: "Padlock icon" }
@@ -3545,7 +3560,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "span",
-        { staticClass: "flex items-end text-xs md:text-sm text-gray-700" },
+        {
+          staticClass:
+            "flex items-end text-xs md:text-sm text-gray-700 font-sans_serif"
+        },
         [_vm._v("\n        Ships in 5-7 Business Days\n        ")]
       )
     ]),
@@ -3625,7 +3643,7 @@ var render = function() {
               }
             },
             [
-              _c("p", { staticClass: "text-sm py-2" }, [
+              _c("p", { staticClass: "text-sm py-2 font-sans_serif" }, [
                 _vm._v(_vm._s(_vm.name))
               ])
             ]
@@ -3678,9 +3696,11 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("h1", { staticClass: "text-base text-gay-600 font-bold mt-6" }, [
-      _vm._v("Fabric choices")
-    ]),
+    _c(
+      "h1",
+      { staticClass: "text-base text-gay-600 font-bold font-sans_serif mt-6" },
+      [_vm._v("Fabric choices")]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "mt-3 mb-20" }, [
       _c(
