@@ -16,15 +16,15 @@
             </span>
         </div>
         <div class="flex justify-center">
-            <img class="sticky top-0 object-contain w-full h-auto mt-20" :class="{'hidden': !imageLoaded}" :alt="imageUrl" :src="'/assets/variants/' + imageUrl" >
-            <img class="w-46 h-46" :class="{'hidden': imageLoaded}" :alt="imageUrl" :src="'/assets/variants/loader.gif'" >
+            <img class="object-contain w-full h-auto mt-20" :class="{'hidden': !imageLoaded}" :alt="imageName" :src="'/assets/variants/' + imageUrl" >
+            <img class="w-46 h-46" :class="{'hidden': imageLoaded}" alt="Loader gif" :src="'/assets/variants/loader.gif'" >
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['imageUrl', 'imageLoaded'],
+        props: ['imageUrl', 'imageName', 'imageLoaded'],
         data: function () {
             return {}
         },

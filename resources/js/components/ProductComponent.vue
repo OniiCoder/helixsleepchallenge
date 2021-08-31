@@ -6,7 +6,7 @@
 
         <div class="flex flex-wrap mt-8 md:mt-16" ref="coverSection">
             <div class="w-full lg:w-4/6 block md:pr-10">
-                <product-image-component :imageUrl="imageUrl" :imageLoaded="imageLoaded"></product-image-component>
+                <product-image-component :imageUrl="imageUrl" :imageLoaded="imageLoaded" :imageName="imageName"></product-image-component>
                 <bottom-icons-component></bottom-icons-component>
             </div>
             <div class="w-full lg:w-2/6 divide-y-4 divide-white">
@@ -36,6 +36,7 @@ import axios from 'axios'
                 product: null,
                 imageLoaded: false,
                 imageUrl: 'loader.gif',
+                imageName: '',
                 selectedId: 1
             }
         },
@@ -46,6 +47,7 @@ import axios from 'axios'
             changeProductImage(event) {
                 this.imageUrl = event[0];
                 this.selectedId = event[1]
+                this.imageName = event[2]
                 this.imageLoaded = true;
 
                 this.goto();
@@ -60,8 +62,8 @@ import axios from 'axios'
                             if(response.data.data.variation.length > 0) {
                                 this.selectedId = response.data.data.variation[0].id;
                                 this.imageUrl = response.data.data.variation[0].image_url;
+                                this.imageName = response.data.data.variation[0].name;
                                 this.imageLoaded = true;
-                                // this.$emit("selectVariation", [response.data.data.variation[0].image_url]);
                             }
                         }
                     }

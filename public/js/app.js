@@ -1996,6 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
       product: null,
       imageLoaded: false,
       imageUrl: 'loader.gif',
+      imageName: '',
       selectedId: 1
     };
   },
@@ -2006,6 +2007,7 @@ __webpack_require__.r(__webpack_exports__);
     changeProductImage: function changeProductImage(event) {
       this.imageUrl = event[0];
       this.selectedId = event[1];
+      this.imageName = event[2];
       this.imageLoaded = true;
       this["goto"]();
     },
@@ -2020,7 +2022,8 @@ __webpack_require__.r(__webpack_exports__);
             if (response.data.data.variation.length > 0) {
               _this.selectedId = response.data.data.variation[0].id;
               _this.imageUrl = response.data.data.variation[0].image_url;
-              _this.imageLoaded = true; // this.$emit("selectVariation", [response.data.data.variation[0].image_url]);
+              _this.imageName = response.data.data.variation[0].name;
+              _this.imageLoaded = true;
             }
           }
         }
@@ -2132,7 +2135,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['imageUrl', 'imageLoaded'],
+  props: ['imageUrl', 'imageName', 'imageLoaded'],
   data: function data() {
     return {};
   },
@@ -2202,8 +2205,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _VariationComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VariationComponent.vue */ "./resources/js/components/VariationComponent.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -2224,7 +2225,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   emits: ["selectVariation", "selectedId"],
@@ -2235,23 +2235,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  mounted: function mounted() {// this.loadVariations();
-  },
   methods: {
     changeProductImage: function changeProductImage(event) {
-      this.$emit("selectVariation", event); // this.selectedId = event[1];
-    } // loadVariations () {
-    //     axios.get('/api/variations')
-    //     .then((response) => {
-    //         this.variations = response.data.data;
-    //         this.selectedId = response.data.data[0].id
-    //         this.$emit("selectVariation", [response.data.data[0].image_url]);
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     });
-    // },
-
+      this.$emit("selectVariation", event);
+    }
   }
 });
 
@@ -3301,7 +3288,8 @@ var render = function() {
                 _c("product-image-component", {
                   attrs: {
                     imageUrl: _vm.imageUrl,
-                    imageLoaded: _vm.imageLoaded
+                    imageLoaded: _vm.imageLoaded,
+                    imageName: _vm.imageName
                   }
                 }),
                 _vm._v(" "),
@@ -3564,15 +3552,15 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "flex justify-center" }, [
       _c("img", {
-        staticClass: "sticky top-0 object-contain w-full h-auto mt-20",
+        staticClass: "object-contain w-full h-auto mt-20",
         class: { hidden: !_vm.imageLoaded },
-        attrs: { alt: _vm.imageUrl, src: "/assets/variants/" + _vm.imageUrl }
+        attrs: { alt: _vm.imageName, src: "/assets/variants/" + _vm.imageUrl }
       }),
       _vm._v(" "),
       _c("img", {
         staticClass: "w-46 h-46",
         class: { hidden: _vm.imageLoaded },
-        attrs: { alt: _vm.imageUrl, src: "/assets/variants/loader.gif" }
+        attrs: { alt: "Loader gif", src: "/assets/variants/loader.gif" }
       })
     ])
   ])
@@ -3615,7 +3603,7 @@ var render = function() {
           },
           on: {
             click: function($event) {
-              return _vm.selectVariant([_vm.imageUrl, _vm.id])
+              return _vm.selectVariant([_vm.imageUrl, _vm.id, _vm.name])
             }
           }
         },

@@ -9,7 +9,7 @@
                 </div>
             </a> -->
             
-            <div @click="selectVariant([imageUrl, id])" class="w-full flex flex-col items-center bg-custom-gray text-xl rounded-md cursor-pointer" :class="{ 'text-white': isSelected == id,  'text-gray-800': !(isSelected == id),'border-2': isSelected == id, 'border-blue-600': isSelected == id}">
+            <div @click="selectVariant([imageUrl, id, name])" class="w-full flex flex-col items-center bg-custom-gray text-xl rounded-md cursor-pointer" :class="{ 'text-white': isSelected == id,  'text-gray-800': !(isSelected == id),'border-2': isSelected == id, 'border-blue-600': isSelected == id}">
                 <img class="h-32 object-contain rounded-tl-md rounded-tr-md" :alt="name" :src="'/assets/variants/' + imageUrl" >
                 <div class="w-full text-center" :class="{'bg-blue-600': isSelected == id, 'bg-gray-200': !(isSelected == id), 'rounded-bl-md': !(isSelected == id), 'rounded-br-md': !(isSelected == id),}">
                     <p class="text-sm py-2">{{name}}</p>

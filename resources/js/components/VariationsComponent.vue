@@ -20,7 +20,6 @@
 
 <script>
 import VariationComponent from './VariationComponent.vue'
-import axios from 'axios'
     export default {
         emits: ["selectVariation", "selectedId"],
         components: { VariationComponent },
@@ -29,25 +28,10 @@ import axios from 'axios'
             return {
             }
         },
-        mounted() {
-            // this.loadVariations();
-        },
         methods: {
             changeProductImage (event) {
                 this.$emit("selectVariation", event);
-                // this.selectedId = event[1];
             },
-            // loadVariations () {
-            //     axios.get('/api/variations')
-            //     .then((response) => {
-            //         this.variations = response.data.data;
-            //         this.selectedId = response.data.data[0].id
-            //         this.$emit("selectVariation", [response.data.data[0].image_url]);
-            //     })
-            //     .catch(function (error) {
-            //         console.log(error);
-            //     });
-            // },
         }
     }
 </script>
