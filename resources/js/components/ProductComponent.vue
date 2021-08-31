@@ -55,7 +55,6 @@ import axios from 'axios'
                 axios.get('/api/products/1')
                 .then((response) => {
                     this.product = response.data.data;
-                    console.log(response.data.data);
                     if(response.data.data != null) {
                         if(response.data.data.variation != null) {
                             if(response.data.data.variation.length > 0) {

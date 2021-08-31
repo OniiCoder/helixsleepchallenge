@@ -2014,7 +2014,6 @@ __webpack_require__.r(__webpack_exports__);
 
       axios__WEBPACK_IMPORTED_MODULE_5___default().get('/api/products/1').then(function (response) {
         _this.product = response.data.data;
-        console.log(response.data.data);
 
         if (response.data.data != null) {
           if (response.data.data.variation != null) {
