@@ -16,8 +16,8 @@ class CreateVariationsTable extends Migration
         Schema::create('variations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained();
-            $table->string('name', 255);
-            $table->string('image_url', 500);
+            $table->string('name');
+            $table->string('image_url');
             $table->timestamps();
         });
     }
