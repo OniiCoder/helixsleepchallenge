@@ -6,7 +6,7 @@
 
         <div class="flex flex-wrap mt-8 md:mt-16" ref="coverSection">
             <div class="w-full lg:w-4/6 block md:pr-10">
-                <product-image-component :imageUrl="imageUrl" :imageLoaded="imageLoaded" :imageName="imageName"></product-image-component>
+                <product-image-component :productImageUrl="productImageUrl" :productImageIsLoaded="productImageIsLoaded" :productImageName="productImageName"></product-image-component>
                 <bottom-icons-component></bottom-icons-component>
             </div>
             <div class="w-full lg:w-2/6 divide-y-4 divide-white">
@@ -34,26 +34,26 @@ import axios from 'axios'
         data: function () {
              return {
                 product: null,
-                imageLoaded: false,
-                imageUrl: 'loader.gif',
-                imageName: '',
+                productImageIsLoaded: false,
+                productImageUrl: 'loader.gif',
+                productImageName: '',
                 selectedId: 1
             }
         },
         mounted() {
-            this.loadProducts();
+            this.loadProduct();
         },
         methods: {
             changeProductImage(event) {
-                this.imageUrl = event[0];
+                this.productImageUrl = event[0];
                 this.selectedId = event[1]
-                this.imageName = event[2]
-                this.imageLoaded = true;
+                this.productImageName = event[2]
+                this.productImageIsLoaded = true;
 
                 this.goto();
                 
             },
-            loadProducts: function () {
+            loadProduct: function () {
                 axios.get('/api/products/1')
                 .then((response) => {
                     this.product = response.data.data;
@@ -61,9 +61,9 @@ import axios from 'axios'
                         if(response.data.data.variation != null) {
                             if(response.data.data.variation.length > 0) {
                                 this.selectedId = response.data.data.variation[0].id;
-                                this.imageUrl = response.data.data.variation[0].image_url;
-                                this.imageName = response.data.data.variation[0].name;
-                                this.imageLoaded = true;
+                                this.productImageUrl = response.data.data.variation[0].image_url;
+                                this.productImageName = response.data.data.variation[0].name;
+                                this.productImageIsLoaded = true;
                             }
                         }
                     }

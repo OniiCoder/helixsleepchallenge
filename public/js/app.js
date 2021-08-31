@@ -1994,24 +1994,24 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       product: null,
-      imageLoaded: false,
-      imageUrl: 'loader.gif',
-      imageName: '',
+      productImageIsLoaded: false,
+      productImageUrl: 'loader.gif',
+      productImageName: '',
       selectedId: 1
     };
   },
   mounted: function mounted() {
-    this.loadProducts();
+    this.loadProduct();
   },
   methods: {
     changeProductImage: function changeProductImage(event) {
-      this.imageUrl = event[0];
+      this.productImageUrl = event[0];
       this.selectedId = event[1];
-      this.imageName = event[2];
-      this.imageLoaded = true;
+      this.productImageName = event[2];
+      this.productImageIsLoaded = true;
       this["goto"]();
     },
-    loadProducts: function loadProducts() {
+    loadProduct: function loadProduct() {
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_5___default().get('/api/products/1').then(function (response) {
@@ -2021,9 +2021,9 @@ __webpack_require__.r(__webpack_exports__);
           if (response.data.data.variation != null) {
             if (response.data.data.variation.length > 0) {
               _this.selectedId = response.data.data.variation[0].id;
-              _this.imageUrl = response.data.data.variation[0].image_url;
-              _this.imageName = response.data.data.variation[0].name;
-              _this.imageLoaded = true;
+              _this.productImageUrl = response.data.data.variation[0].image_url;
+              _this.productImageName = response.data.data.variation[0].name;
+              _this.productImageIsLoaded = true;
             }
           }
         }
@@ -2135,7 +2135,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['imageUrl', 'imageName', 'imageLoaded'],
+  props: ['productImageUrl', 'productImageName', 'productImageIsLoaded'],
   data: function data() {
     return {};
   },
@@ -2179,7 +2179,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['id', 'name', 'imageUrl', 'isSelected'],
-  emits: ["selectVariation"],
   data: function data() {
     return {};
   },
@@ -2227,7 +2226,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  emits: ["selectVariation", "selectedId"],
   components: {
     VariationComponent: _VariationComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default
   },
@@ -3287,9 +3285,9 @@ var render = function() {
               [
                 _c("product-image-component", {
                   attrs: {
-                    imageUrl: _vm.imageUrl,
-                    imageLoaded: _vm.imageLoaded,
-                    imageName: _vm.imageName
+                    productImageUrl: _vm.productImageUrl,
+                    productImageIsLoaded: _vm.productImageIsLoaded,
+                    productImageName: _vm.productImageName
                   }
                 }),
                 _vm._v(" "),
@@ -3571,13 +3569,16 @@ var render = function() {
     _c("div", { staticClass: "flex justify-center" }, [
       _c("img", {
         staticClass: "object-contain w-full h-auto mt-20",
-        class: { hidden: !_vm.imageLoaded },
-        attrs: { alt: _vm.imageName, src: "/assets/variants/" + _vm.imageUrl }
+        class: { hidden: !_vm.productImageIsLoaded },
+        attrs: {
+          alt: _vm.productImageName,
+          src: "/assets/variants/" + _vm.productImageUrl
+        }
       }),
       _vm._v(" "),
       _c("img", {
         staticClass: "w-46 h-46",
-        class: { hidden: _vm.imageLoaded },
+        class: { hidden: _vm.productImageIsLoaded },
         attrs: { alt: "Loader gif", src: "/assets/variants/loader.gif" }
       })
     ])

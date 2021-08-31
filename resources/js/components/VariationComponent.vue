@@ -23,7 +23,6 @@
 
 export default ({
     props: ['id', 'name', 'imageUrl', 'isSelected'],
-    emits: ["selectVariation"],
     data() {
         return {
         }

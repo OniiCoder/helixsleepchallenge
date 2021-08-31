@@ -21,7 +21,6 @@
 <script>
 import VariationComponent from './VariationComponent.vue'
     export default {
-        emits: ["selectVariation", "selectedId"],
         components: { VariationComponent },
         props: ['variations', 'selectedId'],
         data: function () {
